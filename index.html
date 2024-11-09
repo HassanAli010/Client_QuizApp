@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar custom-navbar">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <!-- Placeholder for the logo or brand -->
+            </div>
+
+            <div class="d-flex align-items-center  gap-3 navbar-icons">
+                <!-- Bell icon with no dropdown -->
+
+                <i style="color: #a0a3bd;" class="bi bi-bell-fill"></i>
+
+                <!-- List icon with dropdown -->
+
+                <div class="dropdown-top">
+                    <a style="background-color: transparent !important;" class="dropdown-toggle dropdown-tg" href="#"
+                        id="listDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/bx-grid-horizontal.svg.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu d-menu-list" aria-labelledby="listDropdown">
+                        <li class="d-flex align-items-center"><img src="images/Star.png" alt=""> <a
+                                class="dropdown-item" href="#">New Quiz</a></li>
+                        <li class="d-flex align-items-center mt-3"><img src="images/Heart.png" alt=""><a
+                                class="dropdown-item" href="#">My Quizzes</a></li>
+                        <li class="d-flex align-items-center mt-3"><img src="images/Auto-added frame.png" alt=""><a
+                                class="dropdown-item" href="#">Marketplace</a></li>
+                        <li class="d-flex align-items-center mt-3"><img src="images/bxs-lock-open.svg.png" alt=""><a
+                                class="dropdown-item" href="#">Admin</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Profile icon with dropdown -->
+                <div class="dropdown">
+                    <a style="background-color: transparent !important;" class="dropdown-toggle dropdown-tg" href="#"
+                        id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i style="color: #a0a3bd;" class="bi bi-person-fill"></i>
+                    </a>
+                    <ul class="dropdown-menu d-menu-profile" aria-labelledby="profileDropdown">
+                        <li class="d-flex align-items-center "> <img src="images/user (1).png" alt=""><a
+                                class="dropdown-item" href="#">Profile</a></li>
+                        <li class="d-flex align-items-center mt-3"><img src="images/arrow-up-circle.png" alt=""><a
+                                class="dropdown-item" href="#">Upgrade Plan</a></li>
+                        <li class="d-flex align-items-center mt-3"> <img src="images/log-out.png" alt=""><a
+                                class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="logo">
+            <img style="margin-top: 20px;" src="images/qzb-w 2.png" alt="">
+        </div>
+        <button class="toggle-btn" onclick="toggleSidebar()"><img src="images/menu-alt-2.png" alt=""></button>
+
+        <div class="menu" id="menu">
+            <button class="new-quiz-btn">
+                <div class="plus">
+                    <img src="images/plus.png" alt="">
+                </div>
+                <p style="color: rgb(187, 187, 187);;"> New Quiz</p>
+            </button>
+
+            <div class="section">
+                <h4>Previous 30 Days</h4>
+                <ul>
+                    <li><span><i class="bi bi-chat-dots-fill"></i></span> Grammar Parts of Speech Quiz</li>
+                    <li><span><i class="bi bi-chat-dots-fill"></i></span> Choose the right synonym</li>
+                    <li><span><i class="bi bi-chat-dots-fill"></i></span> They're over there with ___ Dog</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h4>June</h4>
+                <ul>
+                    <li><span><i class="bi bi-chat-dots-fill"></i></span> Please ensure that you select the...</li>
+                </ul>
+                <span class="show-more">Show more</span>
+            </div>
+
+            <div class="section">
+                <h4>Groups</h4>
+                <ul>
+                    <li><span><img src="images/Vector.png" alt=""></span> English Semi-Finals</li>
+                    <li><span><img src="images/Vector.png" alt=""></span> English Finals</li>
+                    <li><span><img src="images/Vector.png" alt=""></span> Mathematics Contest</li>
+                </ul>
+            </div>
+            <button class="new-quiz-btn allquiz-btn ">
+                <div class="all-quizzes ">
+                    <span><i style="font-size: large;" class="bi bi-heart-half"></i></span>
+                </div>
+                <p>All Quizzes </p>
+            </button>
+
+            <button class="new-quiz-btn allquiz-btn btn2 ">
+                <div class="all-quizzes ">
+                    <img src="images/arrow-up-circle.png" alt="">
+                </div>
+                <p>All Quizzes </p>
+            </button>
+
+        </div>
+
+    </div>
+    <div class="main-content">
+        <div class="quiz-section">
+            <div class="star-icon"><img src="images/Star.png" alt=""></div>
+            <h1>Create a New Quiz</h1>
+            <p>Create quizzes, play, and share them with your friends.</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="quiz-builder">
+        <div class="collapsed-bar">
+            <button id="toggleButton">
+                <span id="toggleIcon"><img src="images/chevron-left.png" alt=""></span> <!-- Up Arrow Icon -->
+            </button>
+        </div>
+
+        <div class="expanded-bar">
+            <div class="dropdowns">
+                <!-- First Row of Dropdowns -->
+                <div class="row upper-row">
+                    <div class="dropdown">
+                        <a class="btn btn-secondary dropdown-toggle dropdown-subject"
+                            style="left: -6%; position: relative;" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="images/Frame 352.png" alt=""> Subject
+                        </a>
+                        <ul class="dropdown-menu" id="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="text-btn" data-value="text">Text</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="subject-btn" data-value="Subject">Subject</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="link-btn" data-value="link">Link</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="file-upload-btn" data-value="file-upload">File
+                                    Upload</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="upload-btn" data-value="upload">Upload</a></li>
+                            <hr>
+                            <li><a class="dropdown-item" href="#" id="prompt-btn" data-value="prompt">Prompt</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Content Area -->
+                    <div id="dynamic-content" style="position: absolute;
+    left: 25%;
+    top: 64px;
+    width: 75%;display: flex;gap: 30px;">
+                        <!-- The dynamic content will appear here -->
+                    </div>
+
+
+                </div>
+
+                <!-- Second Row of Dropdowns -->
+                <div class="main-second-row">
+                    <div class="row second-row">
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle dropdown-type" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="dropdownimg" src="images/Frame 1437253669.png" alt="">
+                                <p class="dropdown-p">Type </p> <i style="color: black;" class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">True/False</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Multiple choice</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Fill in the blank</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Short Answer</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Matching</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Mixed</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle " style="    left: -10%;
+    position: relative;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="dropdownimg" src="images/Frame 1437253671.png" alt="">
+                                <p># of Questions </p> <i style="color: black;" class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">10</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">20</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">30</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">40</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">50</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">60</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">70</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle dropdown-language" style="        left: -16%;
+    position: relative" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="dropdownimg" src="images/Frame 1437253670.png" alt="">
+                                <p>Language </p> <i style="color: black;" class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">German</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Norwegian</a></li>
+                                <hr>
+                                <li><a class="dropdown-item" href="#">Danish</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="btn btn-secondary dropdown-toggle dropdown-dl" style="left: -22%;
+    position: relative;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img class="dropdownimg" src="images/Frame 1437253672.png" alt="">
+                                <p>Difficulty Level </p> <i style="color: black;" class="bi bi-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                                <li><a class="dropdown-item" href="#">4</a></li>
+                                <li><a class="dropdown-item" href="#">5</a></li>
+                                <li><a class="dropdown-item" href="#">Mixed</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="build-quiz-btn">Build My Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="textModal" tabindex="-1" aria-labelledby="textModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 800px !important;height: 400px !important;    position: relative;
+    left: -25%">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="textModalLabel" style="font-weight: 700;">Enter Your Text</h5>
+
+                </div>
+                <div class="modal-body" style="overflow-y: scroll !important;">
+
+                    <p id="expanded-text-content"></p>
+
+                    Quantum mechanics is a cornerstone of modern physics, providing a comprehensive framework for
+                    understanding the behavior
+                    of matter and energy at the smallest scales. The theory diverges significantly from classical
+                    mechanics, introducing
+                    concepts that challenge our everyday perceptions of reality. One of the most fundamental principles
+                    of quantum mechanics
+                    is wave-particle duality, which posits that every particle exhibits both wave-like and particle-like
+                    properties. This
+                    duality is exemplified by the famous double-slit experiment, where particles such as electrons
+                    create an interference
+                    pattern, a characteristic of waves, when not observed, but behave like discrete particles when
+                    measured. This phenomenon
+                    underscores the complex nature of quantum entities, which cannot be fully described by classical
+                    analogies. Another key
+                    concept is quantization, which dictates that energy levels in atoms are discrete rather than
+                    continuous. This idea was
+                    first proposed by Max Planck to explain black-body radiation, suggesting that energy is emitted or
+                    absorbed in discrete
+                    packets called quanta. This revelation led to the development of the quantum theory of atomic
+                    structure, where electrons
+                    occupy specific energy levels, and transitions between these levels result in the emission or
+                    absorption of photons with
+                    precise energy values. The quantized nature of energy levels is fundamental to understanding atomic
+                    and molecular
+                    spectra, as well as the stability of atoms. The uncertainty principle, formulated by Werner
+                    Heisenberg, is another
+                    cornerstone of quantum mechanics. It states that it is impossible to simultaneously know both the
+                    exact position and
+                    momentum of a particle. The more precisely one of these properties is known, the less precisely the
+                    other can be
+                    determined. This principle is mathematically expressed as Δx * Δp ≥ ħ/2, where Δx represents the
+                    uncertainty in
+                    position, Δp represents the uncertainty in momentum, and ħ is the reduced Planck constant. The
+                    uncertainty principle has
+                    profound implications for the nature of reality, suggesting that at the quantum level, the universe
+                    is inherently
+                    probabilistic rather than deterministic. Superposition is another crucial concept, describing how
+                    quantum systems can
+                    exist in multiple states simultaneously. A classic illustration of superposition is Schrödinger's
+                    cat, a thought
+                    experiment in which a cat in a sealed box is simultaneously alive and dead until the box is opened
+                    and the state is
+                    observed. This paradox highlights the counterintuitive nature of quantum mechanics, where particles
+                    can exist in
+                    multiple states or locations until measured. Superposition is a key principle behind quantum
+                    computing, where qubits can
+                    represent multiple states at once, vastly increasing computational power compared to classical bits.
+                    Entanglement,
+                    described by Einstein as "spooky action at a distance," is a phenomenon where particles become
+                    interconnected such that
+                    the state of one particle instantaneously affects the state of another, regardless of the distance
+                    separating them. This
+                    concept was experimentally confirmed and remains one of the most intriguing and debated aspects of
+                    quantum mechanics.
+                    Entanglement has practical applications in quantum information theory, including quantum
+                    cryptography and quantum
+                    teleportation, where the entangled states can be used to transmit information securely over long
+                    distances. The
+                    mathematical framework of quantum mechanics is built on wave functions, which describe the
+                    probability amplitude of a
+                    particle's state. The wave function is a solution to the Schrödinger equation, a fundamental
+                    equation that governs the
+                    dynamics of quantum systems. The squared magnitude of the wave function gives the probability
+                    density of finding a
+                    particle in a particular state or location. This probabilistic interpretation, known as the
+                    Copenhagen interpretation,
+                    was championed by Niels Bohr and remains one of the most widely accepted interpretations of quantum
+                    mechanics. Despite
+                    its successes, quantum mechanics presents philosophical challenges, particularly concerning the
+                    nature of measurement
+                    and reality. The measurement problem addresses how and why the collapse of the wave function occurs,
+                    transitioning a
+                    system from a superposition of states to a definite state upon observation. Various interpretations,
+                    such as the
+                    Many-Worlds Interpretation, propose different solutions to this problem, suggesting that all
+                    possible outcomes of a
+                    quantum measurement occur in separate, branching universes. Quantum mechanics also intersects with
+                    other areas of
+                    physics, such as quantum field theory, which extends the principles of quantum mechanics to fields
+                    and particles in
+                    high-energy environments. Quantum field theory is the foundation for the Standard Model of particle
+                    physics, describing
+                    the fundamental particles and their interactions. Additionally, ongoing research in quantum gravity
+                    aims to reconcile
+                    quantum mechanics with general relativity, seeking a unified theory that describes all fundamental
+                    forces of nature. In
+                    summary, quantum mechanics is a profound and complex theory that has revolutionized our
+                    understanding of the microscopic
+                    world. Its principles, including wave-particle duality, quantization, uncertainty, superposition,
+                    and entanglement,
+                    challenge classical intuitions and provide deep insights into the behavior of matter and energy.
+                    Despite its
+                    counterintuitive nature, quantum mechanics has led to numerous technological advancements and
+                    continues to be a vibrant
+                    field of scientific inquiry.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" style="border-radius: 40px;
+    width: 100px;background-color: #5F2EEA;" class="btn btn-secondary" data-bs-dismiss="modal">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById("sidebar");
+        const menu = document.getElementById("menu");
+        sidebar.classList.toggle("open");
+    }
+    const toggleButton = document.getElementById('toggleButton');
+    const expandedBar = document.querySelector('.expanded-bar');
+    const toggleIcon = document.getElementById('toggleIcon');
+
+    toggleButton.addEventListener('click', () => {
+        // Toggle the expanded bar
+        expandedBar.style.display = expandedBar.style.display === 'none' || expandedBar.style.display === '' ? 'block' : 'none';
+
+        // Toggle the arrow icon direction
+        toggleIcon.style.transform = expandedBar.style.display === 'block' ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+
+
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function () {
+            // Remove 'selected' class from all items
+            dropdownItems.forEach(i => i.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked item
+            this.classList.add('selected');
+        });
+
+
+        const toggleButton = document.getElementById('toggleButton');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleButton.addEventListener('click', function () {
+            sidebar.classList.toggle('open');  // Toggle the 'open' class
+            sidebar.classList.toggle('closed');  // Toggle the 'closed' class
+        });
+    });
+
+
+    // Select the content area where we will insert the dynamic content
+    const contentArea = document.getElementById('dynamic-content');
+    const expandedTextContent = "This is the pre-filled content in the text field that will be shown in the modal.";
+
+    // Text button event
+    document.getElementById('text-btn').addEventListener('click', function () {
+        contentArea.innerHTML = `
+            <div class="input-group">
+                <textarea style="height: 25px;border:none;" class="form-control"  readonly>${expandedTextContent.substring(0, 50)}...</textarea>
+                    <button  class="text-field button " style="color: #5f2eea;
+    border: none;
+    padding: 10px;
+    background: transparent;margin-right:5%;margin-top:-5px
+    " id="expand-btn" data-bs-toggle="modal" data-bs-target="#textModal">Expand</button>
+                
+            </div>
+        `;
+
+        // Set the expanded text content when the expand button is clicked
+        document.getElementById('expand-btn').addEventListener('click', function () {
+            document.getElementById('expanded-text-content').innerText = expandedTextContent;
+        });
+    });
+
+    // Subject button event (3 dropdowns)
+    document.getElementById('subject-btn').addEventListener('click', function () {
+        contentArea.innerHTML = `
+            <select style="width: 30%" class="form-select" aria-label="Subject select">
+                <option selected>Choose a Subject</option>
+                <option value="1">English</option>
+                <option value="2">Hindi</option>
+                <option value="2">Mathematics</option>
+                <option value="2">Biology</option>
+                <option value="2">Physics</option>
+
+            </select>
+            <select style="width: 30%" class="form-select" aria-label="Topic select">
+                <option selected>Choose a Topic</option>
+                <option value="1">Topic 1</option>
+                <option value="2">Topic 2</option>
+            </select>
+            <select style="width: 30%" class="form-select" aria-label="Sub-topic select">
+                <option selected>Choose a Sub-topic</option>
+                <option value="1">Sub-topic 1</option>
+                <option value="2">Sub-topic 2</option>
+            </select>
+        `;
+    });
+
+    // Link button event
+    document.getElementById('link-btn').addEventListener('click', function () {
+        contentArea.innerHTML = '<input style="background:transparent;border:none;" type="text" class="form-control" placeholder="e.g. https//www.google.com/English" readonly>';
+    });
+
+    // File Upload button event
+    document.getElementById('file-upload-btn').addEventListener('click', function () {
+        contentArea.innerHTML = '<input style="background:transparent;border:none;" type="file" class="form-control" id="actual-btn" style="border:none">';
+    });
+
+    // Upload button event
+    document.getElementById('upload-btn').addEventListener('click', function () {
+        contentArea.innerHTML = '<input style="background:transparent;border:none;" type="file" class="form-control">';
+    });
+
+    // Prompt button event
+    document.getElementById('prompt-btn').addEventListener('click', function () {
+        contentArea.innerHTML = `
+            <div class="input-group">
+                <textarea style="height: 25px;border:none;" class="form-control" placeholder="Type your message here"></textarea>
+                <span style="height: 25px;margin-top:5px;border:none;backgroud:transparent;margin-right:5%;" class="input-group-text">
+                     <form>
+                    
+                  <i type="file" class="bi bi-paperclip"></i>
+
+
+                        </form>
+                </span>
+            </div>
+        `;
+    });
+
+
+</script>
